@@ -1,82 +1,82 @@
 {
-  "name": "Jardin de Baies",
-  "description": "Collection de baies utiles pour les soins et effets spéciaux",
+  "name": "树果园",
+  "description": "用于恢复和特殊效果的有用树果收藏",
   "author": "MiniMax Agent",
   "created": "2025-10-19",
   "items": [
     {
       "id": 149,
-      "name": "Baie Oran",
+      "name": "橙橙果",
       "quantity": 50
     },
     {
       "id": 150,
-      "name": "Baie Pêcha",
+      "name": "桃桃果",
       "quantity": 30
     },
     {
       "id": 151,
-      "name": "Baie Fraive",
+      "name": "莓莓果",
       "quantity": 30
     },
     {
       "id": 152,
-      "name": "Baie Willia",
+      "name": "利木果",
       "quantity": 30
     },
     {
       "id": 153,
-      "name": "Baie Mépo",
+      "name": "苹野果",
       "quantity": 30
     },
     {
       "id": 154,
-      "name": "Baie Résin",
+      "name": "柿仔果",
       "quantity": 30
     },
     {
       "id": 155,
-      "name": "Baie Sitrus",
+      "name": "文柚果",
       "quantity": 20
     },
     {
       "id": 156,
-      "name": "Baie Figuy",
+      "name": "勿花果",
       "quantity": 15
     },
     {
       "id": 157,
-      "name": "Baie Wiki",
+      "name": "异奇果",
       "quantity": 15
     },
     {
       "id": 158,
-      "name": "Baie Mago",
+      "name": "木子果",
       "quantity": 15
     },
     {
       "id": 159,
-      "name": "Baie Gowav",
+      "name": "芒芒果",
       "quantity": 15
     },
     {
       "id": 160,
-      "name": "Baie Papaya",
+      "name": "乐芭果",
       "quantity": 15
     },
     {
       "id": 168,
-      "name": "Baie Enigma",
+      "name": "谜芝果",
       "quantity": 5
     },
     {
       "id": 169,
-      "name": "Baie Micle",
+      "name": "奇秘果",
       "quantity": 5
     },
     {
       "id": 170,
-      "name": "Baie Selve",
+      "name": "释陀果",
       "quantity": 5
     }
   ]

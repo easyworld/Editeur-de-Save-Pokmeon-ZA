@@ -1,5 +1,5 @@
 """
-Gestionnaire de Presets pour Pokemon Legends Z-A Save Editor
+宝可梦传说 Z-A 存档编辑器预设管理器
 """
 
 import json
@@ -8,7 +8,7 @@ from datetime import datetime
 from typing import Dict, List, Any
 
 class PresetManager:
-    """Gestionnaire des presets d'objets"""
+    """物品预设管理器"""
     
     def __init__(self, preset_dir="presets"):
         self.preset_dir = preset_dir
@@ -16,180 +16,180 @@ class PresetManager:
         self.create_default_presets()
     
     def ensure_preset_dir(self):
-        """S'assurer que le répertoire des presets existe"""
+        """确保预设目录存在"""
         if not os.path.exists(self.preset_dir):
             os.makedirs(self.preset_dir)
     
     def create_default_presets(self):
-        """Créer les presets par défaut"""
+        """创建默认预设"""
         default_presets = {
             "starter_pack": {
-                "name": "Pack de Démarrage",
-                "description": "Objets essentiels pour commencer l'aventure dans Lumiose",
+                "name": "新手礼包",
+                "description": "在密阿雷城开始冒险所需的基本物品",
                 "author": "MiniMax Agent",
                 "created": "2025-10-19",
                 "items": [
-                    {"id": 1, "name": "Master Ball", "quantity": 5},
-                    {"id": 2, "name": "Ultra Ball", "quantity": 30},
-                    {"id": 3, "name": "Great Ball", "quantity": 50},
-                    {"id": 4, "name": "Poké Ball", "quantity": 99},
-                    {"id": 17, "name": "Potion", "quantity": 20},
-                    {"id": 18, "name": "Super Potion", "quantity": 15},
-                    {"id": 19, "name": "Hyper Potion", "quantity": 10},
-                    {"id": 20, "name": "Potion Max", "quantity": 5}
+                    {"id": 1, "name": "大师球", "quantity": 5},
+                    {"id": 2, "name": "高级球", "quantity": 30},
+                    {"id": 3, "name": "超级球", "quantity": 50},
+                    {"id": 4, "name": "精灵球", "quantity": 99},
+                    {"id": 17, "name": "伤药", "quantity": 20},
+                    {"id": 18, "name": "好伤药", "quantity": 15},
+                    {"id": 19, "name": "厉害伤药", "quantity": 10},
+                    {"id": 20, "name": "全满药", "quantity": 5}
                 ]
             },
             
             "mega_collection": {
-                "name": "Collection Méga-Évolution",
-                "description": "Toutes les méga-pierres principales pour débuter avec les mégas",
+                "name": "超级进化收藏",
+                "description": "开始使用超级进化的主要超级石",
                 "author": "MiniMax Agent", 
                 "created": "2025-10-19",
                 "items": [
-                    # Méga-pierres des starters de Kalos
-                    {"id": 658, "name": "Charizardite X", "quantity": 1},
-                    {"id": 659, "name": "Charizardite Y", "quantity": 1},
-                    {"id": 660, "name": "Venusaurite", "quantity": 1},
-                    {"id": 661, "name": "Blastoisinite", "quantity": 1},
+                    # 卡洛斯御三家的超级石
+                    {"id": 658, "name": "喷火龙石X", "quantity": 1},
+                    {"id": 659, "name": "喷火龙石Y", "quantity": 1},
+                    {"id": 660, "name": "妙蛙花石", "quantity": 1},
+                    {"id": 661, "name": "水箭龟石", "quantity": 1},
                     
-                    # Mégas populaires
-                    {"id": 662, "name": "Lucarionite", "quantity": 1},
-                    {"id": 663, "name": "Garchompite", "quantity": 1},
-                    {"id": 664, "name": "Méwtwoïte X", "quantity": 1},
-                    {"id": 665, "name": "Méwtwoïte Y", "quantity": 1},
-                    {"id": 666, "name": "Rayquazite", "quantity": 1},
+                    # 热门超级进化
+                    {"id": 662, "name": "路卡利欧石", "quantity": 1},
+                    {"id": 663, "name": "烈咬陆鲨石", "quantity": 1},
+                    {"id": 664, "name": "超梦石X", "quantity": 1},
+                    {"id": 665, "name": "超梦石Y", "quantity": 1},
+                    {"id": 666, "name": "烈空坐石", "quantity": 1},
                     
-                    # Nouvelles mégas de Z-A
-                    {"id": 700, "name": "Zeroarite", "quantity": 1},
-                    {"id": 701, "name": "Zoroarkite", "quantity": 1},
-                    {"id": 702, "name": "Serperiorite", "quantity": 1},
-                    {"id": 703, "name": "Emboarite", "quantity": 1}
+                    # Z-A的新超级进化
+                    {"id": 700, "name": "捷拉奥拉石", "quantity": 1},
+                    {"id": 701, "name": "索罗亚克石", "quantity": 1},
+                    {"id": 702, "name": "君主蛇石", "quantity": 1},
+                    {"id": 703, "name": "炎武王石", "quantity": 1}
                 ]
             },
             
             "competitive_setup": {
-                "name": "Setup Compétitif",
-                "description": "Objets essentiels pour le jeu compétitif et les combats sérieux",
+                "name": "竞技配置",
+                "description": "竞技对战和严肃战斗的必备物品",
                 "author": "MiniMax Agent",
                 "created": "2025-10-19", 
                 "items": [
-                    # Pokéballs de qualité
-                    {"id": 1, "name": "Master Ball", "quantity": 10},
-                    {"id": 2, "name": "Ultra Ball", "quantity": 99},
-                    {"id": 12, "name": "Premier Ball", "quantity": 50},
+                    # 优质精灵球
+                    {"id": 1, "name": "大师球", "quantity": 10},
+                    {"id": 2, "name": "高级球", "quantity": 99},
+                    {"id": 12, "name": "纪念球", "quantity": 50},
                     
-                    # Soins
-                    {"id": 19, "name": "Hyper Potion", "quantity": 50},
-                    {"id": 20, "name": "Potion Max", "quantity": 30},
-                    {"id": 21, "name": "Total Soin", "quantity": 20},
-                    {"id": 22, "name": "Rappel", "quantity": 10},
-                    {"id": 23, "name": "Rappel Max", "quantity": 5},
+                    # 恢复道具
+                    {"id": 19, "name": "厉害伤药", "quantity": 50},
+                    {"id": 20, "name": "全满药", "quantity": 30},
+                    {"id": 21, "name": "全面恢复", "quantity": 20},
+                    {"id": 22, "name": "活力碎片", "quantity": 10},
+                    {"id": 23, "name": "活力块", "quantity": 5},
                     
-                    # Objets de combat
-                    {"id": 50, "name": "Poké Poupée", "quantity": 10},
-                    {"id": 51, "name": "Fluide Fuite", "quantity": 10},
+                    # 战斗物品
+                    {"id": 50, "name": "替身娃娃", "quantity": 10},
+                    {"id": 51, "name": "逃脱绳", "quantity": 10},
                     
-                    # PP et stats
-                    {"id": 60, "name": "Huile", "quantity": 10},
-                    {"id": 61, "name": "Huile Max", "quantity": 5},
-                    {"id": 62, "name": "PP Plus", "quantity": 10},
-                    {"id": 63, "name": "PP Max", "quantity": 5}
+                    # PP和属性
+                    {"id": 60, "name": "PP单项小补剂", "quantity": 10},
+                    {"id": 61, "name": "PP单项全补剂", "quantity": 5},
+                    {"id": 62, "name": "PP多项小补剂", "quantity": 10},
+                    {"id": 63, "name": "PP多项全补剂", "quantity": 5}
                 ]
             },
             
             "tm_collection": {
-                "name": "Collection CT Essentielle", 
-                "description": "Les CT les plus utiles pour l'entraînement",
+                "name": "招式学习器精选集", 
+                "description": "训练最有用的招式学习器",
                 "author": "MiniMax Agent",
                 "created": "2025-10-19",
                 "items": [
-                    # CT de base populaires (IDs approximatifs)
-                    {"id": 328, "name": "CT001 Charge", "quantity": 1},
-                    {"id": 329, "name": "CT002 Griffe Dragon", "quantity": 1},
-                    {"id": 330, "name": "CT003 Psykoud'Boul", "quantity": 1},
-                    {"id": 331, "name": "CT004 Roulade", "quantity": 1},
-                    {"id": 332, "name": "CT005 Boue-Bombe", "quantity": 1},
-                    {"id": 350, "name": "CT025 Façade", "quantity": 1},
-                    {"id": 360, "name": "CT035 Repos", "quantity": 1},
-                    {"id": 380, "name": "CT055 Ébullition", "quantity": 1},
-                    {"id": 400, "name": "CT075 Danse-Lames", "quantity": 1},
-                    {"id": 420, "name": "CT095 Telluriforce", "quantity": 1}
+                    # 热门基础招式学习器（大致ID）
+                    {"id": 328, "name": "招式01 撞击", "quantity": 1},
+                    {"id": 329, "name": "招式02 龙爪", "quantity": 1},
+                    {"id": 330, "name": "招式03 意念头锤", "quantity": 1},
+                    {"id": 331, "name": "招式04 滚动", "quantity": 1},
+                    {"id": 332, "name": "招式05 污泥炸弹", "quantity": 1},
+                    {"id": 350, "name": "招式25 硬撑", "quantity": 1},
+                    {"id": 360, "name": "招式35 睡觉", "quantity": 1},
+                    {"id": 380, "name": "招式55 热水", "quantity": 1},
+                    {"id": 400, "name": "招式75 剑舞", "quantity": 1},
+                    {"id": 420, "name": "招式95 大地之力", "quantity": 1}
                 ]
             },
             
             "lumiose_explorer": {
-                "name": "Explorateur de Lumiose",
-                "description": "Tout ce qu'il faut pour explorer efficacement la région de Lumiose",
+                "name": "密阿雷探险家",
+                "description": "高效探索密阿雷地区所需的一切",
                 "author": "MiniMax Agent",
                 "created": "2025-10-19",
                 "items": [
-                    # Capture variée
-                    {"id": 2, "name": "Ultra Ball", "quantity": 50},
-                    {"id": 3, "name": "Great Ball", "quantity": 99},
-                    {"id": 4, "name": "Poké Ball", "quantity": 99},
-                    {"id": 6, "name": "Filet Ball", "quantity": 30},
-                    {"id": 7, "name": "Scuba Ball", "quantity": 20},
-                    {"id": 8, "name": "Faiblo Ball", "quantity": 30},
-                    {"id": 10, "name": "Chrono Ball", "quantity": 30},
-                    {"id": 13, "name": "Sombre Ball", "quantity": 30},
-                    {"id": 15, "name": "Rapide Ball", "quantity": 30},
+                    # 多样化捕捉
+                    {"id": 2, "name": "高级球", "quantity": 50},
+                    {"id": 3, "name": "超级球", "quantity": 99},
+                    {"id": 4, "name": "精灵球", "quantity": 99},
+                    {"id": 6, "name": "捕网球", "quantity": 30},
+                    {"id": 7, "name": "潜水球", "quantity": 20},
+                    {"id": 8, "name": "巢穴球", "quantity": 30},
+                    {"id": 10, "name": "计时球", "quantity": 30},
+                    {"id": 13, "name": "黑暗球", "quantity": 30},
+                    {"id": 15, "name": "速度球", "quantity": 30},
                     
-                    # Soins complets
-                    {"id": 17, "name": "Potion", "quantity": 30},
-                    {"id": 18, "name": "Super Potion", "quantity": 25},
-                    {"id": 19, "name": "Hyper Potion", "quantity": 20},
-                    {"id": 24, "name": "Antidote", "quantity": 15},
-                    {"id": 25, "name": "Anti-Para", "quantity": 15},
-                    {"id": 26, "name": "Anti-Brûle", "quantity": 15},
-                    {"id": 27, "name": "Anti-Gel", "quantity": 15},
-                    {"id": 28, "name": "Réveil", "quantity": 15},
+                    # 全面恢复
+                    {"id": 17, "name": "伤药", "quantity": 30},
+                    {"id": 18, "name": "好伤药", "quantity": 25},
+                    {"id": 19, "name": "厉害伤药", "quantity": 20},
+                    {"id": 24, "name": "解毒药", "quantity": 15},
+                    {"id": 25, "name": "麻痹治疗", "quantity": 15},
+                    {"id": 26, "name": "灼伤治疗", "quantity": 15},
+                    {"id": 27, "name": "冰冻治疗", "quantity": 15},
+                    {"id": 28, "name": "觉醒药", "quantity": 15},
                     
-                    # Utilitaires d'exploration
-                    {"id": 80, "name": "Corde Sortie", "quantity": 10},
-                    {"id": 81, "name": "Repousse", "quantity": 20},
-                    {"id": 82, "name": "Super Repousse", "quantity": 15},
-                    {"id": 83, "name": "Max Repousse", "quantity": 10}
+                    # 探索工具
+                    {"id": 80, "name": "逃脱绳", "quantity": 10},
+                    {"id": 81, "name": "除虫喷雾", "quantity": 20},
+                    {"id": 82, "name": "超级除虫喷雾", "quantity": 15},
+                    {"id": 83, "name": "最高级除虫喷雾", "quantity": 10}
                 ]
             },
             
             "berry_garden": {
-                "name": "Jardin de Baies",
-                "description": "Collection de baies utiles pour les soins et effets spéciaux",
+                "name": "树果园",
+                "description": "用于恢复和特殊效果的有用树果收藏",
                 "author": "MiniMax Agent",
                 "created": "2025-10-19", 
                 "items": [
-                    # Baies de soin de base
-                    {"id": 149, "name": "Baie Oran", "quantity": 50},
-                    {"id": 150, "name": "Baie Pêcha", "quantity": 30},
-                    {"id": 151, "name": "Baie Fraive", "quantity": 30},
-                    {"id": 152, "name": "Baie Willia", "quantity": 30},
-                    {"id": 153, "name": "Baie Mépo", "quantity": 30},
-                    {"id": 154, "name": "Baie Résin", "quantity": 30},
+                    # 基础恢复树果
+                    {"id": 149, "name": "橙橙果", "quantity": 50},
+                    {"id": 150, "name": "桃桃果", "quantity": 30},
+                    {"id": 151, "name": "莓莓果", "quantity": 30},
+                    {"id": 152, "name": "利木果", "quantity": 30},
+                    {"id": 153, "name": "苹野果", "quantity": 30},
+                    {"id": 154, "name": "柿仔果", "quantity": 30},
                     
-                    # Baies spéciales
-                    {"id": 155, "name": "Baie Sitrus", "quantity": 20},
-                    {"id": 156, "name": "Baie Figuy", "quantity": 15},
-                    {"id": 157, "name": "Baie Wiki", "quantity": 15},
-                    {"id": 158, "name": "Baie Mago", "quantity": 15},
-                    {"id": 159, "name": "Baie Gowav", "quantity": 15},
-                    {"id": 160, "name": "Baie Papaya", "quantity": 15},
+                    # 特殊树果
+                    {"id": 155, "name": "文柚果", "quantity": 20},
+                    {"id": 156, "name": "勿花果", "quantity": 15},
+                    {"id": 157, "name": "异奇果", "quantity": 15},
+                    {"id": 158, "name": "木子果", "quantity": 15},
+                    {"id": 159, "name": "芒芒果", "quantity": 15},
+                    {"id": 160, "name": "乐芭果", "quantity": 15},
                     
-                    # Baies rares
-                    {"id": 168, "name": "Baie Enigma", "quantity": 5},
-                    {"id": 169, "name": "Baie Micle", "quantity": 5},
-                    {"id": 170, "name": "Baie Selve", "quantity": 5}
+                    # 稀有树果
+                    {"id": 168, "name": "谜芝果", "quantity": 5},
+                    {"id": 169, "name": "奇秘果", "quantity": 5},
+                    {"id": 170, "name": "释陀果", "quantity": 5}
                 ]
             }
         }
         
-        # Créer les fichiers de presets s'ils n'existent pas
+        # 如果预设文件不存在则创建
         for preset_id, preset_data in default_presets.items():
             filename = os.path.join(self.preset_dir, f"{preset_id}.json")
             if not os.path.exists(filename):
                 self.save_preset(preset_data, filename)
     
     def save_preset(self, preset_data: Dict[str, Any], filename: str = None):
-        """Sauvegarder un preset"""
+        """保存预设"""
         if filename is None:
             preset_name = preset_data.get("name", "preset").lower().replace(" ", "_")
             filename = os.path.join(self.preset_dir, f"{preset_name}.json")
@@ -200,12 +200,12 @@ class PresetManager:
         return filename
     
     def load_preset(self, filename: str) -> Dict[str, Any]:
-        """Charger un preset"""
+        """加载预设"""
         with open(filename, 'r', encoding='utf-8') as f:
             return json.load(f)
     
     def list_presets(self) -> List[Dict[str, Any]]:
-        """Lister tous les presets disponibles"""
+        """列出所有可用的预设"""
         presets = []
         
         if not os.path.exists(self.preset_dir):
@@ -220,18 +220,18 @@ class PresetManager:
                         "filename": filename,
                         "filepath": filepath,
                         "name": preset.get("name", filename),
-                        "description": preset.get("description", "Aucune description"),
-                        "author": preset.get("author", "Inconnu"),
-                        "created": preset.get("created", "Date inconnue"),
+                        "description": preset.get("description", "无描述"),
+                        "author": preset.get("author", "未知"),
+                        "created": preset.get("created", "日期未知"),
                         "items_count": len(preset.get("items", []))
                     })
                 except Exception as e:
-                    print(f"Erreur lors du chargement de {filename}: {e}")
+                    print(f"加载{filename}时出错: {e}")
         
         return sorted(presets, key=lambda x: x["name"])
     
-    def create_custom_preset(self, name: str, description: str, items: List[Dict[str, Any]], author: str = "Utilisateur"):
-        """Créer un preset personnalisé"""
+    def create_custom_preset(self, name: str, description: str, items: List[Dict[str, Any]], author: str = "用户"):
+        """创建自定义预设"""
         preset_data = {
             "name": name,
             "description": description,
@@ -244,28 +244,28 @@ class PresetManager:
         return filename
     
     def delete_preset(self, filename: str) -> bool:
-        """Supprimer un preset"""
+        """删除预设"""
         filepath = os.path.join(self.preset_dir, filename)
         try:
             if os.path.exists(filepath):
                 os.remove(filepath)
                 return True
         except Exception as e:
-            print(f"Erreur lors de la suppression de {filename}: {e}")
+            print(f"删除{filename}时出错: {e}")
         return False
     
     def export_bag_to_preset(self, bag_items: List[Dict[str, Any]], name: str, description: str = ""):
-        """Exporter le contenu du sac vers un nouveau preset"""
+        """将背包内容导出为新预设"""
         return self.create_custom_preset(name, description, bag_items)
     
     def get_preset_categories(self) -> Dict[str, List[str]]:
-        """Obtenir les catégories de presets"""
+        """获取预设类别"""
         categories = {
-            "Démarrage": ["starter_pack.json"],
-            "Combat": ["competitive_setup.json", "mega_collection.json"],
-            "Exploration": ["lumiose_explorer.json"],
-            "Collection": ["tm_collection.json", "berry_garden.json"],
-            "Personnalisé": []
+            "入门": ["starter_pack.json"],
+            "战斗": ["competitive_setup.json", "mega_collection.json"],
+            "探索": ["lumiose_explorer.json"],
+            "收藏": ["tm_collection.json", "berry_garden.json"],
+            "自定义": []
         }
         
         all_presets = self.list_presets()
@@ -273,24 +273,24 @@ class PresetManager:
         
         for preset in all_presets:
             if preset["filename"] not in default_files:
-                categories["Personnalisé"].append(preset["filename"])
+                categories["自定义"].append(preset["filename"])
         
         return categories
 
 def create_sample_presets():
-    """Créer des presets d'exemple pour la démonstration"""
+    """创建示例预设用于演示"""
     manager = PresetManager()
     
-    print("Gestionnaire de Presets initialisé!")
-    print(f"Presets créés dans le dossier: {manager.preset_dir}")
+    print("预设管理器已初始化！")
+    print(f"预设已在文件夹中创建: {manager.preset_dir}")
     
-    # Lister les presets disponibles
+    # 列出可用的预设
     presets = manager.list_presets()
-    print(f"\nPresets disponibles ({len(presets)}):")
+    print(f"\n可用的预设 ({len(presets)}):")
     for preset in presets:
-        print(f"  • {preset['name']} - {preset['items_count']} objets")
+        print(f"  • {preset['name']} - {preset['items_count']}个物品")
         print(f"    {preset['description']}")
-        print(f"    Auteur: {preset['author']} | Créé: {preset['created']}")
+        print(f"    作者: {preset['author']} | 创建于: {preset['created']}")
         print()
 
 if __name__ == "__main__":

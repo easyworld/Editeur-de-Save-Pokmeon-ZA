@@ -1,57 +1,57 @@
 {
-  "name": "Collection CT Essentielle",
-  "description": "Les CT les plus utiles pour l'entraînement",
+  "name": "招式学习器精选集",
+  "description": "训练最有用的招式学习器",
   "author": "MiniMax Agent",
   "created": "2025-10-19",
   "items": [
     {
       "id": 328,
-      "name": "CT001 Charge",
+      "name": "招式01 撞击",
       "quantity": 1
     },
     {
       "id": 329,
-      "name": "CT002 Griffe Dragon",
+      "name": "招式02 龙爪",
       "quantity": 1
     },
     {
       "id": 330,
-      "name": "CT003 Psykoud'Boul",
+      "name": "招式03 意念头锤",
       "quantity": 1
     },
     {
       "id": 331,
-      "name": "CT004 Roulade",
+      "name": "招式04 滚动",
       "quantity": 1
     },
     {
       "id": 332,
-      "name": "CT005 Boue-Bombe",
+      "name": "招式05 污泥炸弹",
       "quantity": 1
     },
     {
       "id": 350,
-      "name": "CT025 Façade",
+      "name": "招式25 硬撑",
       "quantity": 1
     },
     {
       "id": 360,
-      "name": "CT035 Repos",
+      "name": "招式35 睡觉",
       "quantity": 1
     },
     {
       "id": 380,
-      "name": "CT055 Ébullition",
+      "name": "招式55 热水",
       "quantity": 1
     },
     {
       "id": 400,
-      "name": "CT075 Danse-Lames",
+      "name": "招式75 剑舞",
       "quantity": 1
     },
     {
       "id": 420,
-      "name": "CT095 Telluriforce",
+      "name": "招式95 大地之力",
       "quantity": 1
     }
   ]

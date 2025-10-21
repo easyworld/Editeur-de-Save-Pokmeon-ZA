@@ -1,112 +1,112 @@
 {
-  "name": "Explorateur de Lumiose",
-  "description": "Tout ce qu'il faut pour explorer efficacement la région de Lumiose",
+  "name": "密阿雷探险家",
+  "description": "高效探索密阿雷地区所需的一切",
   "author": "MiniMax Agent",
   "created": "2025-10-19",
   "items": [
     {
       "id": 2,
-      "name": "Ultra Ball",
+      "name": "高级球",
       "quantity": 50
     },
     {
       "id": 3,
-      "name": "Great Ball",
+      "name": "超级球",
       "quantity": 99
     },
     {
       "id": 4,
-      "name": "Poké Ball",
+      "name": "精灵球",
       "quantity": 99
     },
     {
       "id": 6,
-      "name": "Filet Ball",
+      "name": "捕网球",
       "quantity": 30
     },
     {
       "id": 7,
-      "name": "Scuba Ball",
+      "name": "潜水球",
       "quantity": 20
     },
     {
       "id": 8,
-      "name": "Faiblo Ball",
+      "name": "巢穴球",
       "quantity": 30
     },
     {
       "id": 10,
-      "name": "Chrono Ball",
+      "name": "计时球",
       "quantity": 30
     },
     {
       "id": 13,
-      "name": "Sombre Ball",
+      "name": "黑暗球",
       "quantity": 30
     },
     {
       "id": 15,
-      "name": "Rapide Ball",
+      "name": "速度球",
       "quantity": 30
     },
     {
       "id": 17,
-      "name": "Potion",
+      "name": "伤药",
       "quantity": 30
     },
     {
       "id": 18,
-      "name": "Super Potion",
+      "name": "好伤药",
       "quantity": 25
     },
     {
       "id": 19,
-      "name": "Hyper Potion",
+      "name": "厉害伤药",
       "quantity": 20
     },
     {
       "id": 24,
-      "name": "Antidote",
+      "name": "解毒药",
       "quantity": 15
     },
     {
       "id": 25,
-      "name": "Anti-Para",
+      "name": "麻痹治疗",
       "quantity": 15
     },
     {
       "id": 26,
-      "name": "Anti-Brûle",
+      "name": "灼伤治疗",
       "quantity": 15
     },
     {
       "id": 27,
-      "name": "Anti-Gel",
+      "name": "冰冻治疗",
       "quantity": 15
     },
     {
       "id": 28,
-      "name": "Réveil",
+      "name": "觉醒药",
       "quantity": 15
     },
     {
       "id": 80,
-      "name": "Corde Sortie",
+      "name": "逃脱绳",
       "quantity": 10
     },
     {
       "id": 81,
-      "name": "Repousse",
+      "name": "除虫喷雾",
       "quantity": 20
     },
     {
       "id": 82,
-      "name": "Super Repousse",
+      "name": "超级除虫喷雾",
       "quantity": 15
     },
     {
       "id": 83,
-      "name": "Max Repousse",
+      "name": "最高级除虫喷雾",
       "quantity": 10
     }
   ]

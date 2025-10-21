@@ -1,77 +1,77 @@
 {
-  "name": "Setup Compétitif",
-  "description": "Objets essentiels pour le jeu compétitif et les combats sérieux",
+  "name": "竞技配置",
+  "description": "竞技对战和严肃战斗的必备物品",
   "author": "MiniMax Agent",
   "created": "2025-10-19",
   "items": [
     {
       "id": 1,
-      "name": "Master Ball",
+      "name": "大师球",
       "quantity": 10
     },
     {
       "id": 2,
-      "name": "Ultra Ball",
+      "name": "高级球",
       "quantity": 99
     },
     {
       "id": 12,
-      "name": "Premier Ball",
+      "name": "纪念球",
       "quantity": 50
     },
     {
       "id": 19,
-      "name": "Hyper Potion",
+      "name": "厉害伤药",
       "quantity": 50
     },
     {
       "id": 20,
-      "name": "Potion Max",
+      "name": "全满药",
       "quantity": 30
     },
     {
       "id": 21,
-      "name": "Total Soin",
+      "name": "全面恢复",
       "quantity": 20
     },
     {
       "id": 22,
-      "name": "Rappel",
+      "name": "活力碎片",
       "quantity": 10
     },
     {
       "id": 23,
-      "name": "Rappel Max",
+      "name": "活力块",
       "quantity": 5
     },
     {
       "id": 50,
-      "name": "Poké Poupée",
+      "name": "替身娃娃",
       "quantity": 10
     },
     {
       "id": 51,
-      "name": "Fluide Fuite",
+      "name": "逃脱绳",
       "quantity": 10
     },
     {
       "id": 60,
-      "name": "Huile",
+      "name": "PP单项小补剂",
       "quantity": 10
     },
     {
       "id": 61,
-      "name": "Huile Max",
+      "name": "PP单项全补剂",
       "quantity": 5
     },
     {
       "id": 62,
-      "name": "PP Plus",
+      "name": "PP多项小补剂",
       "quantity": 10
     },
     {
       "id": 63,
-      "name": "PP Max",
+      "name": "PP多项全补剂",
       "quantity": 5
     }
   ]
