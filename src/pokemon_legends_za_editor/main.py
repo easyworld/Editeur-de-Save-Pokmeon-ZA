@@ -50,6 +50,16 @@ class PLZASaveEditor:
         
         self.item_database = item_db
         
+        # 加载中文物品数据库
+        self.item_database_cn = {}
+        cn_db_path = os.path.join(os.path.dirname(__file__), "..", "plaza", "util", "item_db_cn.json")
+        try:
+            with open(cn_db_path, 'r', encoding='utf-8') as f:
+                self.item_database_cn = json.load(f)
+        except Exception as e:
+            print(f"加载中文物品数据库失败: {e}")
+            self.item_database_cn = {}
+        
         self.create_widgets()
         self.update_status("就绪 - 请加载存档文件以开始")
         
@@ -384,8 +394,16 @@ class PLZASaveEditor:
                 ))
                 
     def get_item_name(self, item_id: int) -> str:
-        """通过ID获取物品名称"""
-        if str(item_id) in self.item_database:
+        """通过ID获取物品名称（中文）"""
+        # 优先使用中文数据库
+        if str(item_id) in self.item_database_cn:
+            chinese_name = self.item_database_cn[str(item_id)]["chinese_ui_name"]
+            # 如果是 "？？？"，则显示为未知物品
+            if chinese_name == "？？？":
+                return f"未知物品 ({item_id})"
+            return chinese_name
+        # 备用：使用英文数据库
+        elif str(item_id) in self.item_database:
             return self.item_database[str(item_id)]["english_ui_name"]
         return f"未知物品 ({item_id})"
         
